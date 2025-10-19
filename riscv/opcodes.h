@@ -5,6 +5,11 @@
 #define S0      8
 #define S1      9
 
+
+#define MATCH_RELU 0x0B // pick a free CUSTOM-0 opcode
+#define MASK_RELU  0x7F // mask for instruction bits
+
+
 static uint32_t bits(uint32_t value, unsigned int hi, unsigned int lo) {
   return (value >> lo) & ((1 << (hi+1-lo)) - 1);
 }
